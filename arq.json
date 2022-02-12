@@ -1,0 +1,221 @@
+Object {
+    "attributes": Object {
+      "abbreviatedTitles": Array [
+        "Kimetsu no Yaiba 2",
+        "Demon Slayer: Kimetsu no Yaiba Season 2",
+        "Demon Slayer 2",
+        "Demon Slayer: Kimetsu no Yaiba - Yuukaku-hen",
+      ],
+      "ageRating": "R",
+      "ageRatingGuide": "17+ (violence & profanity)",
+      "averageRating": "87.2",
+      "canonicalTitle": "Kimetsu no Yaiba: Yuukaku-hen",
+      "coverImage": Object {
+        "large": "https://media.kitsu.io/anime/44081/cover_image/large-a5ef1fa23f686e8f2b11f4d33fe38b92.jpeg",
+        "meta": Object {
+          "dimensions": Object {
+            "large": Object {
+              "height": 800,
+              "width": 3360,
+            },
+            "small": Object {
+              "height": 400,
+              "width": 1680,
+            },
+            "tiny": Object {
+              "height": 200,
+              "width": 840,
+            },
+          },
+        },
+        "original": "https://media.kitsu.io/anime/44081/cover_image/76f0b283fe588a7b0c4782d4c2dc9b99.jpg",
+        "small": "https://media.kitsu.io/anime/44081/cover_image/small-840ec82f0786fef4c1b53f91029c3923.jpeg",
+        "tiny": "https://media.kitsu.io/anime/44081/cover_image/tiny-f039c84e130ebb9c0453016e58cc6241.jpeg",
+      },
+      "coverImageTopOffset": 0,
+      "createdAt": "2021-02-15T11:33:43.860Z",
+      "description": "After visiting the Rengoku residence, Tanjirou and his comrades volunteer for a mission within the Entertainment District, a place where desires are sold 
+  and demons dwell. They journey alongside the flashy Sound Hashira, Tengen Uzui, in search of a monstrous foe terrorizing the town. Sworn to slay creatures of the night, the hunt continues.
+  
+  (Source: Funimation)",
+      "endDate": "2022-02-13",
+      "episodeCount": 11,
+      "episodeLength": null,
+      "favoritesCount": 0,
+      "nextRelease": null,
+      "nsfw": false,
+      "popularityRank": 18957,
+      "posterImage": Object {
+        "large": "https://media.kitsu.io/anime/44081/poster_image/large-8638fde4407a117614ad4438a855aa37.jpeg",
+        "medium": "https://media.kitsu.io/anime/44081/poster_image/medium-017a80e3ca6176dc689a3b95586b0814.jpeg",
+        "meta": Object {
+          "dimensions": Object {
+            "large": Object {
+              "height": 780,
+              "width": 550,
+            },
+            "medium": Object {
+              "height": 554,
+              "width": 390,
+            },
+            "small": Object {
+              "height": 402,
+              "width": 284,
+            },
+            "tiny": Object {
+              "height": 156,
+              "width": 110,
+            },
+          },
+        },
+        "original": "https://media.kitsu.io/anime/44081/poster_image/f621d8ffeaf6b1883024c009843de46b.jpg",
+        "small": "https://media.kitsu.io/anime/44081/poster_image/small-f3f2a7f24a8d7e2b9a5c73e7aa15908e.jpeg",
+        "tiny": "https://media.kitsu.io/anime/44081/poster_image/tiny-a4a4653b4472cb8924cd5b90e606fab6.jpeg",
+      },
+      "ratingFrequencies": Object {
+        "10": "114",
+        "11": "48",
+        "12": "156",
+        "13": "44",
+        "14": "3102",
+        "15": "88",
+        "16": "441",
+        "17": "170",
+        "18": "514",
+        "19": "145",
+        "2": "661",
+        "20": "14123",
+        "3": "15",
+        "4": "48",
+        "5": "14",
+        "6": "49",
+        "7": "20",
+        "8": "946",
+        "9": "27",
+      },
+      "ratingRank": 4,
+      "showType": "TV",
+      "slug": "kimetsu-no-yaiba-yuukaku-hen",
+      "startDate": "2021-12-05",
+      "status": "current",
+      "subtype": "TV",
+      "synopsis": "After visiting the Rengoku residence, Tanjirou and his comrades volunteer for a mission within the Entertainment District, a place where desires are sold and demons dwell. They journey alongside the flashy Sound Hashira, Tengen Uzui, in search 
+  of a monstrous foe terrorizing the town. Sworn to slay creatures of the night, the hunt continues.
+  
+  (Source: Funimation)",
+      "tba": null,
+      "titles": Object {
+        "en": "Demon Slayer: Kimetsu no Yaiba - Entertainment District Arc",
+        "en_jp": "Kimetsu no Yaiba: Yuukaku-hen",
+        "ja_jp": "鬼滅の刃 遊郭編",
+      },
+      "totalLength": null,
+      "updatedAt": "2022-02-11T17:26:24.539Z",
+      "userCount": 0,
+      "youtubeVideoId": "XoJCOAU_72U",
+    },
+    "id": "44081",
+    "links": Object {
+      "self": "/anime/44081",
+    },
+    "relationships": Object {
+      "animeCharacters": Object {
+        "links": Object {
+          "related": "/anime/44081/anime-characters",
+          "self": "/anime/44081/relationships/anime-characters",
+        },
+      },
+      "animeProductions": Object {
+        "links": Object {
+          "related": "/anime/44081/anime-productions",
+          "self": "/anime/44081/relationships/anime-productions",
+        },
+      },
+      "animeStaff": Object {
+        "links": Object {
+          "related": "/anime/44081/anime-staff",
+          "self": "/anime/44081/relationships/anime-staff",
+        },
+      },
+      "castings": Object {
+        "links": Object {
+          "related": "/anime/44081/castings",
+          "self": "/anime/44081/relationships/castings",
+        },
+      },
+      "categories": Object {
+        "links": Object {
+          "related": "/anime/44081/categories",
+          "self": "/anime/44081/relationships/categories",
+        },
+      },
+      "characters": Object {
+        "links": Object {
+          "related": "/anime/44081/characters",
+          "self": "/anime/44081/relationships/characters",
+        },
+      },
+      "episodes": Object {
+        "links": Object {
+          "related": "/anime/44081/episodes",
+          "self": "/anime/44081/relationships/episodes",
+        },
+      },
+      "genres": Object {
+        "links": Object {
+          "related": "/anime/44081/genres",
+          "self": "/anime/44081/relationships/genres",
+        },
+      },
+      "installments": Object {
+        "links": Object {
+          "related": "/anime/44081/installments",
+          "self": "/anime/44081/relationships/installments",
+        },
+      },
+      "mappings": Object {
+        "links": Object {
+          "related": "/anime/44081/mappings",
+          "self": "/anime/44081/relationships/mappings",
+        },
+      },
+      "mediaRelationships": Object {
+        "links": Object {
+          "related": "/anime/44081/media-relationships",
+          "self": "/anime/44081/relationships/media-relationships",
+        },
+      },
+      "productions": Object {
+        "links": Object {
+          "related": "/anime/44081/productions",
+          "self": "/anime/44081/relationships/productions",
+        },
+      },
+      "quotes": Object {
+        "links": Object {
+          "related": "/anime/44081/quotes",
+          "self": "/anime/44081/relationships/quotes",
+        },
+      },
+      "reviews": Object {
+        "links": Object {
+          "related": "/anime/44081/reviews",
+          "self": "/anime/44081/relationships/reviews",
+        },
+      },
+      "staff": Object {
+        "links": Object {
+          "related": "/anime/44081/staff",
+          "self": "/anime/44081/relationships/staff",
+        },
+      },
+      "streamingLinks": Object {
+        "links": Object {
+          "related": "/anime/44081/streaming-links",
+          "self": "/anime/44081/relationships/streaming-links",
+        },
+      },
+    },
+    "type": "anime",
+  }
+  
