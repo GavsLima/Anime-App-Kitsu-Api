@@ -114,6 +114,6 @@ export interface IAnimeDetails {
 
 export interface IButtonProps{
   attributes: IAnime,
-  handlePage: any,
+  handlePage: (id: string, screen: any) => void,
 }
 
