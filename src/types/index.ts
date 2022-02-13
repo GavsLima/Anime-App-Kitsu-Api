@@ -110,5 +110,10 @@ export interface IAnimeDetails {
         },
       youtubeVideoId: string,
   }
+};
+
+export interface IButtonProps{
+  attributes: IAnime,
+  handlePage: any,
 }
 
