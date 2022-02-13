@@ -1,5 +1,4 @@
 import styled from "styled-components/native";
-import { Video } from "expo-av";
 
 export const ScrollAnime = styled.ScrollView`
   background-color: gray;
