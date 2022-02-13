@@ -27,9 +27,9 @@ const Home: React.FC = () => {
   const handleAnimeDetail = (id: string, screen: any) => {
     const newAnime: IGlobalAnimeId = {
       anime_id: id,
-    }
+    };
     dispatch(setNewAnimeId(newAnime));
-    nav.navigate(screen)
+    nav.navigate(screen);
   };
 
   useEffect(() => {
@@ -50,12 +50,14 @@ const Home: React.FC = () => {
           renderItem={({ item }) => (
             <AnimeView>
               <BannerView>
-                <TouchableAnime onPress={() => handleAnimeDetail(item.id ,'Detail') } >
+                <TouchableAnime
+                  onPress={() => handleAnimeDetail(item.id, "Detail")}
+                >
                   <Card id={item.id} attributes={item.attributes} />
                 </TouchableAnime>
               </BannerView>
               <ButtonView>
-                <ButtonAnime id={item.id} attributes={item.attributes} />
+                <ButtonAnime attributes={item} handlePage={handleAnimeDetail} />
               </ButtonView>
             </AnimeView>
           )}
