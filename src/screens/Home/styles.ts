@@ -29,7 +29,7 @@ export const BannerView = styled.View`
 `;
 
 export const ButtonView = styled.View`
-  flex: 0.2
+  flex: 0.2;
 `;
 
 export const TouchableAnime = styled.TouchableOpacity`
