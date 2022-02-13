@@ -6,7 +6,13 @@ const Card: React.FC<IAnime> = ({ attributes }) => {
   return (
     <CenteredView>
       <CardView>
-        <ImageAnime source={{ uri: attributes.posterImage.small }} />
+        <ImageAnime
+          style={{
+            width: attributes.posterImage.meta.dimensions.small.width,
+            height: attributes.posterImage.meta.dimensions.small.height,
+          }}
+          source={{ uri: attributes.posterImage.small }}
+        />
       </CardView>
     </CenteredView>
   );
