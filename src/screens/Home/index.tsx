@@ -34,6 +34,10 @@ const Home: React.FC = () => {
     nav.navigate(screen);
   };
 
+  const goToSearch = (screen: any) => {
+    nav.navigate(screen);
+  };
+
   useEffect(() => {
     api
       .get("/trending/anime")
@@ -47,9 +51,14 @@ const Home: React.FC = () => {
     <ImageBg>
       <Container>
         <IconView>
-          <FontAwesome name="search" size={35} color="magenta" />
+          <FontAwesome
+            name="search"
+            size={35}
+            color="magenta"
+            onPress={() => {goToSearch("Search")}}
+          />
         </IconView>
-        <FlatList
+       <FlatList
           style={styles.flatlistContainer}
           data={animes}
           renderItem={({ item }) => (
@@ -77,7 +86,7 @@ const Home: React.FC = () => {
 const styles = StyleSheet.create({
   flatlistContainer: {
     width: "100%",
-    marginTop: 170,
+    marginTop: 200,
   },
 });
 
