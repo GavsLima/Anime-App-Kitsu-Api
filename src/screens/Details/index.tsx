@@ -1,34 +1,54 @@
 import React, { useEffect, useState } from "react";
-import { Text } from "react-native";
-import { Container } from "./styles";
+import YoutubePlayer from "react-native-youtube-iframe";
+
+import {
+  Container,
+  ImageAnime,
+  TextDetail,
+  ScrollAnime,
+  TextView,
+} from "./styles";
 import { useSelector } from "react-redux";
-import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { IGlobalAnimeId } from "../../store/modules/AnimeDetails/Types";
-import { IAnime } from "../../types";
+import { IAnimeDetails } from "../../types";
 import api from "../../service/api";
 
 const Details: React.FC = () => {
   const animeId = useSelector((state: IGlobalAnimeId) => state.anime_id);
 
-  const [animeDetail, setAnimeDetails] = useState<IAnime>({} as IAnime);
+  const [animeDetail, setAnimeDetails] = useState<IAnimeDetails>();
 
   useEffect(() => {
-    api.get(`/anime/${animeId}`)
-    .then(response => {
-      setAnimeDetails(response.data.data)
-      console.log("nome do baui: ")
-      console.log(animeDetail)
-    })
-    .catch(e => console.log(e))
-  }, [])
+    api
+      .get(`/anime/${animeId}`)
+      .then((response) => {
+        setAnimeDetails(response.data.data);
+      })
+      .catch((e) => console.log(e));
+  }, []);
 
   return (
-    <Container>
-      <TouchableOpacity onPress={() => {}}>
-        <Text>{`Details of: `}</Text>
-      </TouchableOpacity>
-    </Container>
+    <ScrollAnime>
+      <Container>
+        <ImageAnime
+          style={{
+            width:
+              animeDetail?.attributes.posterImage.meta.dimensions.small.width,
+            height:
+              animeDetail?.attributes.posterImage.meta.dimensions.small.height,
+          }}
+          source={{ uri: animeDetail?.attributes.posterImage.small }}
+        />
+        <TextView>
+          <TextDetail>{animeDetail?.attributes.description}</TextDetail>
+        </TextView>
+      </Container>
+      <YoutubePlayer
+        height={250}
+        videoId={animeDetail?.attributes.youtubeVideoId}
+      />
+    </ScrollAnime>
   );
 };
 
