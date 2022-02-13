@@ -11,7 +11,6 @@ export const TouchableAnime = styled.TouchableOpacity`
     border-radius: 20px;
     width: 250px;
     padding: 10px;
-    margin-top: 10px;
 `;
 
 export const TextAnime = styled.Text`

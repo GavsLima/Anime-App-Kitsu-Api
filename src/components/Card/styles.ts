@@ -11,5 +11,6 @@ export const CardView = styled.View`
 `;
 
 export const ImageAnime = styled.Image`
-
+  width: 320px;
+  height: 520px;
 `;
