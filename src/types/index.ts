@@ -117,3 +117,7 @@ export interface IButtonProps{
   handlePage: (id: string, screen: any) => void,
 }
 
+export interface IInputProps{
+  value: any,
+  onChange:any,
+}
