@@ -4,6 +4,7 @@ import {
   BannerView,
   ButtonView,
   Container,
+  IconView,
   ImageBg,
   TouchableAnime,
 } from "./styles";
@@ -11,6 +12,7 @@ import { FlatList, Text } from "react-native";
 import { StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch } from "react-redux";
+import { FontAwesome } from "@expo/vector-icons";
 
 import api from "../../service/api";
 import { IAnime } from "../../types";
@@ -44,6 +46,9 @@ const Home: React.FC = () => {
   return (
     <ImageBg>
       <Container>
+        <IconView>
+          <FontAwesome name="search" size={35} color="magenta" />
+        </IconView>
         <FlatList
           style={styles.flatlistContainer}
           data={animes}
@@ -72,7 +77,7 @@ const Home: React.FC = () => {
 const styles = StyleSheet.create({
   flatlistContainer: {
     width: "100%",
-    marginTop: 150,
+    marginTop: 170,
   },
 });
 

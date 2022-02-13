@@ -3,7 +3,7 @@ import { ImageBackground } from "react-native";
 
 export const Container = styled.SafeAreaView`
   flex-grow: 1;
-  justify-content: center;
+  justify-content: center ;
   align-items: center;
 `;
 
@@ -29,10 +29,15 @@ export const BannerView = styled.View`
 `;
 
 export const ButtonView = styled.View`
-  flex: 0.5;
-  align-items: center;
+  flex: 0.2
 `;
 
 export const TouchableAnime = styled.TouchableOpacity`
   flex: 1;
+`;
+
+export const IconView = styled.View`
+  position: absolute;
+  top: 90px;
+  right: 40px;
 `;
