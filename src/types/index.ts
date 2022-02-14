@@ -112,7 +112,7 @@ export interface IAnimeDetails {
   }
 };
 
-export interface IButtonProps{
+export interface ICardProps{
   attributes: IAnime,
   handlePage: (id: string, screen: any) => void,
 }
