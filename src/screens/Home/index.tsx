@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from "react";
-import {
-  AnimeView,
-  BannerView,
-  ButtonView,
-  Container,
-  IconView,
-  ImageBg,
-  TouchableAnime,
-} from "./styles";
-import { FlatList, Text } from "react-native";
-import { StyleSheet } from "react-native";
+import { AnimeView, Container, IconView } from "./styles";
+import { FlatList, ImageBackground, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch } from "react-redux";
 import { FontAwesome } from "@expo/vector-icons";
+import { Dimensions } from "react-native";
 
 import api from "../../service/api";
 import { IAnime } from "../../types";
 import Card from "../../components/Card";
-import ButtonAnime from "../../components/Button";
 import { IGlobalAnimeId } from "../../store/modules/AnimeDetails/Types";
 import { setNewAnimeId } from "../../store/modules/AnimeDetails/Actions";
 
@@ -48,46 +39,36 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <ImageBg>
-      <Container>
-        <IconView>
-          <FontAwesome
-            name="search"
-            size={35}
-            color="magenta"
-            onPress={() => {goToSearch("Search")}}
-          />
-        </IconView>
-       <FlatList
-          style={styles.flatlistContainer}
-          data={animes}
-          renderItem={({ item }) => (
-            <AnimeView>
-              <BannerView>
-                <TouchableAnime
-                  onPress={() => handleAnimeDetail(item.id, "Detail")}
-                >
-                  <Card id={item.id} attributes={item.attributes} />
-                </TouchableAnime>
-              </BannerView>
-              <ButtonView>
-                <ButtonAnime attributes={item} handlePage={handleAnimeDetail} />
-              </ButtonView>
-            </AnimeView>
-          )}
-          keyExtractor={(item) => item.id}
-          horizontal={true}
+    <Container>
+      <IconView>
+        <FontAwesome
+          name="search"
+          size={35}
+          color="magenta"
+          onPress={() => {
+            goToSearch("Search");
+          }}
         />
-      </Container>
-    </ImageBg>
+      </IconView>
+      <FlatList
+        data={animes}
+        renderItem={({ item }) => (
+          <ImageBackground
+            resizeMode="cover"
+            source={{ uri: item.attributes.coverImage.small }}
+            style={{ flex: 1, justifyContent: "center", width: "100%" }}
+            blurRadius={6}
+          >
+            <AnimeView style={{ width: Dimensions.get("window").width }}>
+              <Card attributes={item} handlePage={handleAnimeDetail} />
+            </AnimeView>
+          </ImageBackground>
+        )}
+        keyExtractor={(item) => item.id}
+        horizontal={true}
+      />
+    </Container>
   );
 };
-
-const styles = StyleSheet.create({
-  flatlistContainer: {
-    width: "100%",
-    marginTop: 200,
-  },
-});
 
 export default Home;
