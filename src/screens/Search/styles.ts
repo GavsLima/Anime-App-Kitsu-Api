@@ -1,20 +1,25 @@
 import styled from "styled-components/native";
 
-export const ScrollSearch = styled.ScrollView`
-  
-`;
-
 export const Container = styled.SafeAreaView`
   flex-grow: 1;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
-  background-color: gray;
-`;
-export const TextSearch = styled.Text`
-    color: white;
+  background-color: #3F3F3F;
 `;
 
 export const FlatListView = styled.View`
-  align-items: center;
-  margin-top: 30px;
+  margin-top: 40%;
+  width: 100%;
+`;
+
+export const IconView = styled.View`
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  z-index: 10;
+`;
+
+export const ImportView = styled.View`
+  position: absolute;
+  top: 70px;
 `;

@@ -25,7 +25,7 @@ export const TextAnime = styled.Text`
   color: #ffff;
   text-align: center;
   align-items: center;
-  background-color: magenta;
+  background-color: #FD1586;
   border-radius: 20px;
   width: 250px;
   padding: 10px;

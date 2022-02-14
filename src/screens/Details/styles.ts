@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 
 export const ScrollAnime = styled.ScrollView`
-  background-color: gray;
+  background-color: #3F3F3F;
 `;
 
 export const Container = styled.SafeAreaView`
