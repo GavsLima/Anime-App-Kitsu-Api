@@ -6,8 +6,8 @@ export const CenteredView = styled.View`
 `;
 
 export const InputTextSearch = styled(TextInput).attrs({
-  width: 300,
   height: 50,
+  width: "85%",
   backgroundColor: "transparent",
   borderBottomColor: "magenta",
   borderBottomWidth: 1,
