@@ -114,10 +114,11 @@ export interface IAnimeDetails {
 
 export interface ICardProps{
   attributes: IAnime,
-  handlePage: (id: string, screen: any) => void,
+  handlePage: (id: string, title: string, screen: any) => void,
 }
 
 export interface IInputProps{
-  value: any,
-  onChange:any,
+  value: string,
+  onChange: (search: string) => void,
+  onSubmmit: (searchText: string) => void,
 }
