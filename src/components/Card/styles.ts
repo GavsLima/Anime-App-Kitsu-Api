@@ -5,12 +5,31 @@ export const CenteredView = styled.View`
 `;
 
 export const CardView = styled.View`
-  flex: 1;
-  width: 100%;
-  margin-left: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 40%;
+  align-items: center;
 `;
 
 export const ImageAnime = styled.Image`
-  width: 320px;
-  height: 520px;
+  width: 100%;
+  height: 90%;
+  margin-bottom: 10px;
+`;
+
+export const ButtonView = styled.View`
+  align-items: center;
+  
+`;
+export const TextAnime = styled.Text`
+  color: #ffff;
+  text-align: center;
+  align-items: center;
+  background-color: magenta;
+  border-radius: 20px;
+  width: 250px;
+  padding: 10px;
+`;
+export const TouchableAnime = styled.TouchableOpacity`
+  width: 100%
 `;

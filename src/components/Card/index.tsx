@@ -1,12 +1,29 @@
 import React from "react";
-import { ImageAnime, CenteredView, CardView } from "./styles";
-import { IAnime } from "../../types";
+import { Dimensions } from "react-native";
+import {
+  ImageAnime,
+  CenteredView,
+  CardView,
+  ButtonView,
+  TextAnime,
+  TouchableAnime,
+} from "./styles";
+import { ICardProps } from "../../types";
 
-const Card: React.FC<IAnime> = ({ attributes }) => {
+const Card: React.FC<ICardProps> = ({ attributes, handlePage }) => {
   return (
     <CenteredView>
-      <CardView>
-        <ImageAnime source={{ uri: attributes.posterImage.small }} />
+      <CardView style={{ width: Dimensions.get("window").width }}>
+        <TouchableAnime
+          onPress={() => handlePage(attributes.id, "Detail")}
+        >
+          <ImageAnime
+            source={{ uri: attributes.attributes.posterImage.small }}
+          />
+          <ButtonView>
+            <TextAnime>{attributes.attributes.canonicalTitle}</TextAnime>
+          </ButtonView>
+        </TouchableAnime>
       </CardView>
     </CenteredView>
   );
