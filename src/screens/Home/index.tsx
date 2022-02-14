@@ -9,7 +9,7 @@ import { Dimensions } from "react-native";
 import api from "../../service/api";
 import { IAnime } from "../../types";
 import Card from "../../components/Card";
-import { IGlobalAnimeId } from "../../store/modules/AnimeDetails/Types";
+import { IGlobalAnime } from "../../store/modules/AnimeDetails/Types";
 import { setNewAnimeId } from "../../store/modules/AnimeDetails/Actions";
 
 const Home: React.FC = () => {
@@ -17,9 +17,10 @@ const Home: React.FC = () => {
   const nav = useNavigation();
   const dispatch = useDispatch();
 
-  const handleAnimeDetail = (id: string, screen: any) => {
-    const newAnime: IGlobalAnimeId = {
+  const handleAnimeDetail = (id: string, title: string, screen: any) => {
+    const newAnime: IGlobalAnime = {
       anime_id: id,
+      anime_title: title
     };
     dispatch(setNewAnimeId(newAnime));
     nav.navigate(screen);
@@ -44,7 +45,7 @@ const Home: React.FC = () => {
         <FontAwesome
           name="search"
           size={35}
-          color="magenta"
+          color="#D11B70"
           onPress={() => {
             goToSearch("Search");
           }}

@@ -1,50 +1,78 @@
 import React, { useState } from "react";
 import InputSearch from "../../components/InputSearch";
-import { ScrollSearch, Container, TextSearch, FlatListView } from "./styles";
 import { FontAwesome } from "@expo/vector-icons";
-import { FlatList, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { useDispatch } from "react-redux";
+
 import api from "../../service/api";
 import { IAnime } from "../../types";
-import GridCard from "../../components/GridCard/indes";
+import GridCard from "../../components/GridCard";
+import { IGlobalAnime } from "../../store/modules/AnimeDetails/Types";
+import { setNewAnimeId } from "../../store/modules/AnimeDetails/Actions";
+
+import {
+  Container,
+  FlatListView,
+  IconView,
+  ImportView,
+} from "./styles";
 
 const Search: React.FC = () => {
   const [text, setText] = useState("");
   const [animeList, setAnimeList] = useState<IAnime[]>([]);
 
-  const handleAnimes = (searchText: string) => {
+  const handleAnimesList = (searchText: string) => {
     api.get(`anime?filter[text]=${searchText}`).then((response) => {
       setAnimeList(response.data.data);
     });
   };
 
+  const nav = useNavigation();
+  const dispatch = useDispatch();
+
+  const handleAnimeDetail = (id: string, title: string , screen: any) => {
+    const newAnime: IGlobalAnime = {
+      anime_id: id,
+      anime_title: title,
+    };
+    dispatch(setNewAnimeId(newAnime));
+    nav.navigate(screen);
+  };
+
+
   return (
     <Container>
-      <View
-        style={{
-          flexDirection: "row",
-          marginTop: 180,
-        }}
-      >
-        <InputSearch
-          value={text}
-          onChange={(search: string) => setText(search)}
-        />
+      <IconView>
         <FontAwesome
           name="search"
           size={35}
-          color="magenta"
+          color="#D11B70"
           onPress={() => {
-            handleAnimes(text);
-            console.log("pressou");
+            handleAnimesList(text);
           }}
         />
-      </View>
+      </IconView>
+
+      <ImportView>
+        <InputSearch
+          value={text}
+          onChange={(search: string) => {
+            setText(search);
+          }}
+          onSubmmit={handleAnimesList}
+        />
+      </ImportView>
+
       <FlatListView>
         {animeList && (
           <FlatList
+            numColumns={2}
             data={animeList}
             renderItem={({ item }) => (
-              <TextSearch>{item.attributes.canonicalTitle}</TextSearch>
+              <>
+                <GridCard attributes={item} handlePage={handleAnimeDetail}  />
+              </>
             )}
             keyExtractor={(item) => item.id}
           />

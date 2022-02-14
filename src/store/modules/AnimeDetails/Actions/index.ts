@@ -1,8 +1,8 @@
-import { IGlobalAnimeId } from "../Types";
+import { IGlobalAnime } from "../Types";
 
-export function setNewAnimeId(animeId: IGlobalAnimeId) {
+export function setNewAnimeId(anime: IGlobalAnime) {
     return{
         type: 'SET',
-        payload: animeId,
+        payload: anime,
     }
 }

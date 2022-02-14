@@ -1,14 +1,26 @@
 import React from "react";
-import { Container, ImageAnime, TextGrid, TextView, TouchableAnime } from "./styles";
+import {
+  Container,
+  ImageAnime,
+  TextGrid,
+  TextView,
+  TouchableAnime,
+} from "./styles";
 import { ICardProps } from "../../types";
 
 const GridCard: React.FC<ICardProps> = ({ attributes, handlePage }) => {
   return (
     <Container>
       <TouchableAnime
-         onPress={() => handlePage(attributes.id, "Detail")}
+        onPress={() =>
+          handlePage(
+            attributes.id,
+            attributes.attributes.canonicalTitle,
+            "Detail"
+          )
+        }
       >
-      <ImageAnime source={{ uri: attributes.attributes.posterImage.small }} />
+        <ImageAnime source={{ uri: attributes.attributes.posterImage.small }} />
       </TouchableAnime>
 
       <TextView>

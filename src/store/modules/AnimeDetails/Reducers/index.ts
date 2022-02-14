@@ -1,20 +1,22 @@
 import { Reducer } from "redux";
-import { IGlobalAnimeId } from "../Types";
+import { IGlobalAnime } from "../Types";
 
-const INITIAL_STATE: IGlobalAnimeId = {
+const INITIAL_STATE: IGlobalAnime = {
     anime_id: '0',
+    anime_title: ''
 }
 
-const GlobalAnimeId: Reducer<IGlobalAnimeId | any> = (
+const GlobalAnime: Reducer<IGlobalAnime | any> = (
     state = INITIAL_STATE,
     action,
 ) => {
     switch(action.type){
         case 'SET':{
-            const {anime_id} = action.payload;
+            const {anime_id, anime_title} = action.payload;
             return{
                 ...state,
                 anime_id,
+                anime_title
             };
         }
         default: {
@@ -23,4 +25,4 @@ const GlobalAnimeId: Reducer<IGlobalAnimeId | any> = (
     }
 };
 
-export default GlobalAnimeId;
+export default GlobalAnime;

@@ -1,6 +1,6 @@
 import { createStore } from "redux";
-import GlobalAnimeId from "./modules/AnimeDetails/Reducers";
+import GlobalAnime from "./modules/AnimeDetails/Reducers";
 
-const store = createStore(GlobalAnimeId)
+const store = createStore(GlobalAnime)
 
 export default store;

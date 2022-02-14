@@ -10,12 +10,12 @@ import {
 } from "./styles";
 import { useSelector } from "react-redux";
 
-import { IGlobalAnimeId } from "../../store/modules/AnimeDetails/Types";
+import { IGlobalAnime } from "../../store/modules/AnimeDetails/Types";
 import { IAnimeDetails } from "../../types";
 import api from "../../service/api";
 
 const Details: React.FC = () => {
-  const animeId = useSelector((state: IGlobalAnimeId) => state.anime_id);
+  const animeId = useSelector((state: IGlobalAnime) => state.anime_id);
 
   const [animeDetail, setAnimeDetails] = useState<IAnimeDetails>();
 
@@ -47,6 +47,7 @@ const Details: React.FC = () => {
       <YoutubePlayer
         height={250}
         videoId={animeDetail?.attributes.youtubeVideoId}
+        webViewStyle={{margin: 20}}
       />
     </ScrollAnime>
   );

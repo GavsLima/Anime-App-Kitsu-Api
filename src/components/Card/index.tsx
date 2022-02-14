@@ -15,7 +15,7 @@ const Card: React.FC<ICardProps> = ({ attributes, handlePage }) => {
     <CenteredView>
       <CardView style={{ width: Dimensions.get("window").width }}>
         <TouchableAnime
-          onPress={() => handlePage(attributes.id, "Detail")}
+          onPress={() => handlePage(attributes.id, attributes.attributes.canonicalTitle , "Detail")}
         >
           <ImageAnime
             source={{ uri: attributes.attributes.posterImage.small }}
