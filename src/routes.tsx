@@ -17,7 +17,7 @@ const Routes: React.FC = () => {
     ...DefaultTheme,
     colors: {
       ...DefaultTheme.colors,
-      primary: "#FE1487",
+      primary: "#FFF",
       card: "#FE1487",
       text: "#FFF",
     },
