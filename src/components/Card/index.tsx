@@ -1,12 +1,10 @@
 import React from "react";
-import { Dimensions, Button } from "react-native";
+import { Dimensions } from "react-native";
 import {
   ImageAnime,
   CenteredView,
   CardView,
-  ButtonView,
   TouchableBanner,
-  ButtonAnime,
   TouchableButton,
   TextAnime,
 } from "./styles";

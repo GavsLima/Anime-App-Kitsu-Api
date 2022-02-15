@@ -1,5 +1,4 @@
 import styled from "styled-components/native";
-import { Button } from "react-native";
 
 export const CenteredView = styled.View`
   align-items: center;
@@ -16,18 +15,6 @@ export const ImageAnime = styled.Image`
   width: 100%;
   height: 90%;
   margin-bottom: 10px;
-`;
-
-export const ButtonView = styled.View`
-  align-items: center;
-  border-radius: 15px;
-  
-  
-`;
-export const ButtonAnime = styled(Button).attrs({
-  color: '#FD1586',
-})`
-  
 `;
 
 export const TouchableBanner = styled.TouchableOpacity`
